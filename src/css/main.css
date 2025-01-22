@@ -1,3 +1,128 @@
+@import url('./normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html {
+    font-size: 62.5%; /* 1em = 10px */
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+p, li {
+    font-size: 1.6em;
+    color: #333;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #f9f9f9; 
+    border-bottom: 1px solid #ddd;
+    width: 100%; 
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar {
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff; 
+    display: none;
+    width: 200px;
+    padding: 1rem;
+    margin: 0;
+    gap: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle:hover span {
+    background-color: #979595;
+}
+
 main {
-    background-color: tomato;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/**** DESKTOP ****/
+@media (min-width: 769px) {
+    .container {
+        max-width: 75%;
+    }
+
+    .header-inner {
+        max-width: 80%;
+        padding: 3rem 0;
+    }
+
+    .menu {
+        flex-direction: row;
+        position: static;
+        display: flex;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .menu li {
+        margin-bottom: 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
 }

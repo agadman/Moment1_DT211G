@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu');
 
     menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
+        menu.classList.toggle('show');
     });
 });

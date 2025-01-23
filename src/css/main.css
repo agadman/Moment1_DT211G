@@ -70,7 +70,7 @@ p, li {
     width: 200px;
     padding: 1rem;
     margin: 0;
-    gap: 1rem;
+    gap: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -83,7 +83,7 @@ p, li {
     text-decoration: underline;
 }
 
-.menu.active {
+.menu.show {
     display: flex;
 }
 
@@ -113,7 +113,6 @@ main {
 }
 
 .task-section {
-    margin-top: 5rem;
     width: 100%;
     text-align: left;
 }
@@ -168,11 +167,13 @@ main {
         background-color: transparent;
         box-shadow: none;
     }
-
     .menu li {
         margin-bottom: 0;
     }
-
+    .menu li a.active {
+        text-decoration: underline;
+    }
+    
     .menu-toggle {
         display: none;
     }
@@ -182,7 +183,7 @@ main {
         align-items: center;
     }
     .task-section {
-        width: 50%;
+        width: 60%;
     }
     .image-gallery {
         grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
